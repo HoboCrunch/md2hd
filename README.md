@@ -90,6 +90,21 @@ Full syntax and guides: [md2hd.app](https://md2hd.app) ·
 - `--port N` — serve on a specific port (default 4173; falls back to a free one)
 - `--no-open` — don't open the browser
 
+## The agent skill
+
+The package ships a skill — `writing-md2hd-maps` — that teaches a coding
+agent the whole authoring language: node frontmatter, `rel:` and wikilink
+edges, the `type: map` block, converting an existing folder of notes into a
+map, and diagnosing a map that parses cleanly but draws the wrong thing.
+
+```sh
+npx skills add HoboCrunch/md2hd
+```
+
+or copy `skills/writing-md2hd-maps/` into your agent's skills directory — it
+is in the npm tarball too, so an installed `md2hd` carries it at
+`node_modules/md2hd/skills/`.
+
 ## Development
 
 This repo is the CLI and packaging shell. The visualizer itself is built in

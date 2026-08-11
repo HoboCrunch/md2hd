@@ -1,12 +1,18 @@
 {
   "name": "md2hd",
-  "version": "0.2.0",
-  "description": "Markdown, mapped — point md2hd at a file or folder of notes and read the map in your browser. Frontmatter becomes nodes, wikilinks become edges.",
+  "version": "0.2.1",
+  "description": "Markdown, mapped \u2014 point md2hd at a file or folder of notes and read the map in your browser. Frontmatter becomes nodes, wikilinks become edges.",
   "type": "module",
-  "bin": { "md2hd": "bin/md2hd.mjs" },
-  "files": ["bin", "dist"],
+  "bin": {
+    "md2hd": "bin/md2hd.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "skills"
+  ],
   "scripts": {
-    "build": "npm --prefix ../dev run build && rm -rf dist && cp -R ../dev/dist dist",
+    "build": "npm --prefix ../dev run build && rm -rf dist skills && cp -R ../dev/dist dist && mkdir -p skills && cp -R ../dev/skills/writing-md2hd-maps skills/writing-md2hd-maps",
     "test": "node smoke.mjs",
     "prepublishOnly": "npm run build && npm test"
   },
@@ -23,7 +29,12 @@
     "cli"
   ],
   "homepage": "https://md2hd.app",
-  "repository": { "type": "git", "url": "git+https://github.com/HoboCrunch/md2hd.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoboCrunch/md2hd.git"
+  },
   "license": "MIT",
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  }
 }
