@@ -16,7 +16,7 @@ npx md2hd map.md     # or a single file
 
 Or install it for keeps: `npm i -g md2hd`.
 
-![An organisation map drawn from a folder of markdown — typed nodes, labelled links, a minimap, and the type strip along the foot](media/shell.jpg)
+![An organisation map drawn from a folder of markdown — typed nodes, labelled links, a minimap, and the type strip along the foot](https://raw.githubusercontent.com/HoboCrunch/md2hd/main/media/shell.jpg)
 
 ## Why
 
@@ -43,7 +43,7 @@ re-reads from disk.
 
 ## Reading a map
 
-![A focused node — the ego view on the canvas, detail and connection columns in the drawer, degree dials on each direction](media/focus.jpg)
+![A focused node — the ego view on the canvas, detail and connection columns in the drawer, degree dials on each direction](https://raw.githubusercontent.com/HoboCrunch/md2hd/main/media/focus.jpg)
 
 The strip at the foot of the canvas holds the map's three surfaces: the
 **Overview**, a tab per **type**, and — when you click a card — the **node**
@@ -51,7 +51,7 @@ itself, its detail beside its connections, split To and From. Hover a row in
 a type's list and its card lights on the canvas; search filters the whole
 map; drag to arrange, and positions are saved.
 
-![A type surface — every node of the type itemised, the hovered row glowing its card on the canvas](media/type.jpg)
+![A type surface — every node of the type itemised, the hovered row glowing its card on the canvas](https://raw.githubusercontent.com/HoboCrunch/md2hd/main/media/type.jpg)
 
 ## The markdown
 
