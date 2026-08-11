@@ -118,10 +118,12 @@ an md2hd map" produces markdown that opens as the map you asked for.
 
 ## Development
 
-This repo is the CLI and packaging shell. The visualizer itself is built in
-the md2hd app repo; `npm run build` expects that checkout as a sibling
-`../dev` directory and copies its build output into `dist/`, which is what
-ships to npm. `npm test` runs a smoke check against the packaged server.
+This repo is self-contained: `dist/` (the built visualizer) and the skill are
+committed, so a fresh clone can run, test, and publish with nothing else
+checked out. The visualizer's source lives in the md2hd app repo;
+`npm run sync` is the maintainer step that rebuilds it from a sibling `../dev`
+checkout and refreshes `dist/` before a release. `npm test` runs a smoke
+check against the packaged server.
 
 ## License
 

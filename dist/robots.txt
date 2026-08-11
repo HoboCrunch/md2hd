@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# The application is a client-only island: there is nothing in its HTML for a
+# crawler to read, and nothing there worth indexing.
+Disallow: /app
+Disallow: /og
+
+Sitemap: https://md2hd.app/sitemap-index.xml

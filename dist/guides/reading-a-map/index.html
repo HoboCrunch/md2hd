@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Reading a map · md2hd</title><meta name="description" content="Focus, hover, search, the map ▸ type ▸ node trail and the config dock — what every part of the canvas is for once the map is drawn."><link rel="canonical" href="https://md2hd.app/guides/reading-a-map"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#12141a"><meta name="color-scheme" content="dark"><meta property="og:type" content="website"><meta property="og:site_name" content="md2hd"><meta property="og:title" content="Reading a map · md2hd"><meta property="og:description" content="Focus, hover, search, the map ▸ type ▸ node trail and the config dock — what every part of the canvas is for once the map is drawn."><meta property="og:url" content="https://md2hd.app/guides/reading-a-map"><meta property="og:image" content="https://md2hd.app/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Reading a map · md2hd"><meta name="twitter:description" content="Focus, hover, search, the map ▸ type ▸ node trail and the config dock — what every part of the canvas is for once the map is drawn."><meta name="twitter:image" content="https://md2hd.app/og.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet"><link rel="sitemap" href="/sitemap-index.xml"><style>.doc-head[data-astro-cid-wehgqt5k]{border-bottom:1px solid var(--line-soft);max-width:74ch;margin-bottom:30px;padding-bottom:26px}.doc-head[data-astro-cid-wehgqt5k] .eyebrow[data-astro-cid-wehgqt5k]{align-items:center;gap:10px;margin:0 0 14px;display:flex}.doc-time[data-astro-cid-wehgqt5k]:before{content:"·";margin-right:10px}.doc-head[data-astro-cid-wehgqt5k] .lead[data-astro-cid-wehgqt5k]{margin-top:14px}.doc-toc[data-astro-cid-wehgqt5k] ul[data-astro-cid-wehgqt5k]{border-left:1px solid var(--line-soft);margin:0;padding:0;list-style:none}.doc-toc[data-astro-cid-wehgqt5k] li[data-astro-cid-wehgqt5k] a[data-astro-cid-wehgqt5k]{padding:5px 0 5px 13px;line-height:1.4;text-decoration:none;display:block}.doc-move[data-astro-cid-wehgqt5k]{background:var(--line-soft);border:1px solid var(--line-soft);border-radius:var(--r-lg);grid-template-columns:1fr 1fr;gap:1px;margin-top:56px;display:grid;overflow:hidden}.doc-move-link[data-astro-cid-wehgqt5k]{background:var(--surface);transition:.16s var(--ease);flex-direction:column;gap:7px;padding:18px 20px;text-decoration:none;display:flex}.doc-move-link[data-astro-cid-wehgqt5k]:hover{background:var(--surface-2)}.doc-move-link[data-astro-cid-wehgqt5k] .d4[data-astro-cid-wehgqt5k]{color:var(--ink);font-weight:600}.doc-move-next[data-astro-cid-wehgqt5k]{text-align:right;align-items:flex-end}@media (width<=560px){.doc-move[data-astro-cid-wehgqt5k]{grid-template-columns:1fr}.doc-move-next[data-astro-cid-wehgqt5k]{text-align:left;align-items:flex-start}}
+:root{--n-0:#111215;--n-1:#1a1b1e;--n-2:#222328;--n-3:#2a2b30;--n-4:#323439;--n-5:#3e4146;--n-6:#51555c;--n-7:#898d94;--n-8:#a4a7ad;--n-9:#d1d3d6;--n-10:#f1f2f4;--bg:var(--n-0);--surface:var(--n-1);--surface-2:var(--n-2);--surface-3:var(--n-4);--surface-dim:#161619;--surface-lift:#1e1f23;--line-soft:var(--n-3);--line:var(--n-5);--line-lift:var(--n-6);--ink-faint:var(--n-7);--ink-mute:var(--n-8);--ink-soft:var(--n-9);--ink:var(--n-10);--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23g)' opacity='.055'/%3E%3C/svg%3E");--shadow-1:0 6px 20px #08090c80;--shadow-2:0 24px 70px #08090c9e;--accent:#0071f9;--accent-bright:#4d9bff;--accent-soft:color-mix(in srgb, var(--accent) 16%, transparent);--accent-line:color-mix(in srgb, var(--accent) 55%, transparent);--accent-glow:color-mix(in srgb, var(--accent) 62%, transparent);--danger:#ee6a81;--edge:#2b394a;--sans:Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;--mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;--rail:244px;--r:7px;--ease:cubic-bezier(.22, .61, .36, 1);color-scheme:dark}*{box-sizing:border-box}body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;margin:0;font-size:14px}button,input,textarea{font:inherit;color:inherit}button{cursor:pointer;background:0 0;border:0}:focus-visible{outline:1.5px solid var(--accent);outline-offset:2px;border-radius:3px}::-webkit-scrollbar{width:9px;height:9px}::-webkit-scrollbar-thumb{background:var(--line);background-clip:padding-box;border:2px solid #0000;border-radius:9px}::-webkit-scrollbar-thumb:hover{background:var(--line-lift);background-clip:padding-box}::-webkit-scrollbar-track{background:0 0}.eyebrow{font-family:var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-size:9.5px;font-weight:500}.chip{border:1px solid var(--line);background:var(--surface-2);height:20px;font-family:var(--mono);letter-spacing:.03em;color:var(--ink-mute);white-space:nowrap;transition:.14s var(--ease);border-radius:4px;align-items:center;gap:5px;padding:0 7px;font-size:10px;display:inline-flex}button.chip:hover{border-color:var(--line-lift);color:var(--ink)}button.chip[aria-pressed=true]{border-color:color-mix(in srgb, var(--chip-color,var(--accent)) 55%, transparent);color:var(--ink);background:color-mix(in srgb, var(--chip-color,var(--accent)) 12%, var(--surface-2))}.swatch{border-radius:2px;flex:none;width:6px;height:6px}
+</style><link rel="stylesheet" href="/_astro/site.DraFuzQE.css"></head><body class><a class="skip" href="#main">Skip to content</a><header class="head"><div class="wrap head-in"><a class="head-mark" href="/" aria-label="md2hd home"><img src="/md2hd.svg" alt="md2hd" width="255" height="51"></a><nav class="head-nav" aria-label="Main"><a class="head-link" href="/product">Product</a><a class="head-link" href="/use-cases">Use cases</a><a class="head-link" href="/guides" aria-current="page">Guides</a><a class="head-link" href="/reference">Reference</a><a class="head-link" href="/changelog">Changelog</a></nav><div class="head-end"><a class="btn btn-accent btn-sm" href="/app">Open the app</a></div></div></header><main id="main"><div class="wrap doc" data-astro-cid-wehgqt5k><nav class="doc-rail" aria-label="Documentation" data-astro-cid-wehgqt5k><div data-astro-cid-wehgqt5k><h2 data-astro-cid-wehgqt5k>Guides</h2><ul data-astro-cid-wehgqt5k><li data-astro-cid-wehgqt5k><a href="/guides/quickstart" data-astro-cid-wehgqt5k>Quickstart</a></li><li data-astro-cid-wehgqt5k><a href="/guides/writing-nodes" data-astro-cid-wehgqt5k>Writing nodes</a></li><li data-astro-cid-wehgqt5k><a href="/guides/relationships" data-astro-cid-wehgqt5k>Relationships</a></li><li data-astro-cid-wehgqt5k><a href="/guides/configuring-a-map" data-astro-cid-wehgqt5k>Configuring a map</a></li><li data-astro-cid-wehgqt5k><a href="/guides/reading-a-map" aria-current="page" data-astro-cid-wehgqt5k>Reading a map</a></li><li data-astro-cid-wehgqt5k><a href="/guides/from-obsidian" data-astro-cid-wehgqt5k>From Obsidian and other vaults</a></li><li data-astro-cid-wehgqt5k><a href="/guides/troubleshooting" data-astro-cid-wehgqt5k>When the map is wrong</a></li></ul></div><div data-astro-cid-wehgqt5k><h2 data-astro-cid-wehgqt5k>Reference</h2><ul data-astro-cid-wehgqt5k><li data-astro-cid-wehgqt5k><a href="/reference" data-astro-cid-wehgqt5k>The markdown, in full</a></li><li data-astro-cid-wehgqt5k><a href="/changelog" data-astro-cid-wehgqt5k>Changelog</a></li></ul></div></nav><article data-astro-cid-wehgqt5k><header class="doc-head" data-astro-cid-wehgqt5k><p class="eyebrow" data-astro-cid-wehgqt5k>Guide<span class="doc-time" data-astro-cid-wehgqt5k>5 min read</span></p><h1 class="d2" data-astro-cid-wehgqt5k>Reading a map</h1><p class="lead" data-astro-cid-wehgqt5k>Focus, hover, search, the map ▸ type ▸ node trail and the config dock — what every part of the canvas is for once the map is drawn.</p></header><div class="prose" data-astro-cid-wehgqt5k><p>The canvas is for reading. Writing happens in your own editor, or in the Source
+tab, which is a plain full-height editor on the file a node came from.</p>
+<h2 id="focus">Focus</h2>
+<p>Click a node and the map lays out its ego network: what points at it on the left,
+what it points at on the right, itself in the middle. That arrangement has no
+crossings by construction, which is the point — highlighting a neighbourhood
+inside a tangle still leaves a tangle.</p>
+<p>The links between the node’s own neighbours stay on screen as quieter arcs
+beside the columns. How the things it touches relate to <em>each other</em> is part of
+the answer, so those links are seated together and kept readable — clearly
+present, clearly second to the links that touch the node itself.</p>
+<p>Click the background and the full map comes back exactly as you arranged it. Ego
+placement is never saved.</p>
+<p>Focus is one hop deep. Deeper neighbourhoods are read from the Connections list
+in the panel, which has room for them.</p>
+<p><strong>Reframe on open</strong>, in the map surface’s config dock, turns reframing off if you
+would rather the map held still and only dimmed.</p>
+<h2 id="hover">Hover</h2>
+<p>Hovering a card applies the same falloff without moving anything:</p>
+<table>
+<thead>
+<tr>
+<th>Distance from the node</th>
+<th>How it draws</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The node itself</td>
+<td>Full, selected treatment</td>
+</tr>
+<tr>
+<td>One link away</td>
+<td>Border pulled toward the type colour</td>
+</tr>
+<tr>
+<td>Two links away</td>
+<td>Dimmed</td>
+</tr>
+<tr>
+<td>Beyond</td>
+<td>Nearly out</td>
+</tr>
+</tbody>
+</table>
+<h2 id="search">Search</h2>
+<p>Search filters the whole map at once. Matches keep their own colour and take the
+brand border; everything else drops back far enough to disappear without leaving
+the layout.</p>
+<p>It overrides focus and hover, so a search is always the thing you are looking at.
+The toolbar reads breadcrumb-first and search-last: where you are on the left,
+what you are looking for on the right, because the trail is read constantly and
+the search is used in bursts.</p>
+<h2 id="three-surfaces">Three surfaces</h2>
+<p>A map raises three questions — what is this, what else is like it, what is in
+here — so the panel is three surfaces of one hierarchy rather than a detail view
+with lists bolted on:</p>
+<pre class="astro-code md2hd" style="background-color:#111215;color:#d1d3d6; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Partnerships  /  Program  /  Open Records Portal</span></span>
+<span class="line"><span>     map              type            node</span></span></code></pre>
+<p>The breadcrumb above the panel header is how you move between them. Every surface
+renders its own ancestors, so clicking a crumb is the only navigation the panel
+needs and there is no back stack to get wrong. The close control sits at the end
+of the trail, because the trail is the one row every surface shares.</p>
+<p><strong>The node surface</strong> is the detail view described below.</p>
+<p><strong>The type surface</strong> itemises every node of that type — title, subtitle, tags and
+link count — and carries a config dock along the bottom.</p>
+<p><strong>The map surface</strong> does the same one level up: every type, its count, and the
+visualization config for the whole map.</p>
+<h2 id="the-type-strip">The type strip</h2>
+<p>The chips along the top of the canvas are the map’s own breadcrumb, not a filter
+row. Clicking one <strong>opens that type’s surface</strong>: the set stands forward on the
+canvas and everything else recedes, which is the same treatment a search match
+gets — on screen, “show me the programs” and “find <em>portal</em>” are one gesture.</p>
+<p>Hiding a type from the canvas is a toggle — <strong>Drawn</strong>, in that type’s own dock,
+or the <code>SHOW</code> row on the map surface, which carries every type at once. A hidden
+type still appears in the strip, struck through, so the control that hid
+something never removes the way back to it.</p>
+<h2 id="the-config-dock">The config dock</h2>
+<p>Anchored under the scrolling list on the type and map surfaces. It sets what a
+card draws beyond its title — type, link count, subtitle, tags — so a map can
+carry terse people beside verbose programs.</p>
+<p>Scopes resolve as <strong>off anywhere means off</strong>. The map surface can silence an
+artifact everywhere; a type can only turn its own off, never override the map
+back on. A chip the map has overruled stays visible and disabled rather than
+disappearing, because a control that vanishes when it stops applying teaches you
+nothing.</p>
+<p>Hidden types and card artifacts are per session, not per map. They reset when you
+open another map and are not saved.</p>
+<h2 id="the-detail-panel">The detail panel</h2>
+<p>Selecting a node opens the panel on the right. It carries, in order:</p>
+<ul>
+<li>The type and weight, then the title and subtitle.</li>
+<li>Tags.</li>
+<li>The <code>description</code>, if the node has one.</li>
+<li>Every unreserved frontmatter key as a labelled row. URLs, bare domains, email
+addresses and phone numbers are clickable.</li>
+<li>The note itself — everything under the frontmatter, rendered.</li>
+<li><strong>Connections</strong>, grouped by relation.</li>
+</ul>
+<p>Each connection heading shows this node’s wording for the relationship and, beside
+it, the other node’s. This is the one place both voices appear at once; the canvas
+shows only the voice you are reading from.</p>
+<p>Click any connection to move to that node.</p>
+<h2 id="the-source-tab">The Source tab</h2>
+<p>The panel’s second tab is the file the node came from, as text, editable. The map
+redraws as you type.</p>
+<p>This is where editing lives because the canvas is for reading, and because node
+editing on the canvas would need a schema-aware form per type — and types are
+yours to invent, so there is no schema to build a form from.</p>
+<p>Edits are saved to the copy of the map in your browser. They are not written back
+to the file on disk.</p>
+<h2 id="links-draw-under-cards">Links draw under cards</h2>
+<p>Worth knowing because it looks deliberate and is: cards win over wiring at any
+density, so a link passes behind any card that sits between its two ends. Where
+a link truly ends is said at its ends — the arrowhead and the label — and every
+link carries a trace of its source type’s colour, so parallel traffic never
+reads as one continuous line. The card you hover or select lifts above any
+neighbour it overlaps.</p>
+<h2 id="labels">Labels</h2>
+<p>A relation label is a mono chip sitting on its line, with a compass badge outside
+its stroke rotated to the true bearing of the node it refers to.</p>
+<p>Crowded labels slide <strong>along</strong> their own path, never across it — a chip floating
+beside a line reads as attached to nothing — and keep sliding until they clear
+any card they would otherwise hide under.</p>
+<p>On a map past about forty links, labels rest quiet — the lines carry the shape —
+and return on exactly the links you hover, focus or search. Smaller maps keep
+their labels on screen.</p>
+<h2 id="keyboard">Keyboard</h2>
+<p><code>Esc</code> closes the panel and the syntax sheet, and clears the search field when it
+has focus. Everything else is pointer work.</p>
+<p>On the canvas the zoom stack sits above the minimap in the bottom-right corner —
+the controls are reached far more often than the map is read, so they take the
+corner nearest your hand.</p>
+</div><nav class="doc-move" aria-label="More documentation" data-astro-cid-wehgqt5k><a class="doc-move-link" href="/guides/configuring-a-map" data-astro-cid-wehgqt5k><span class="eyebrow" data-astro-cid-wehgqt5k>Previous</span><span class="d4" data-astro-cid-wehgqt5k>Configuring a map</span></a><a class="doc-move-link doc-move-next" href="/guides/from-obsidian" data-astro-cid-wehgqt5k><span class="eyebrow" data-astro-cid-wehgqt5k>Next</span><span class="d4" data-astro-cid-wehgqt5k>From Obsidian and other vaults</span></a></nav></article><nav class="doc-toc" aria-label="On this page" data-astro-cid-wehgqt5k><h2 class="eyebrow" data-astro-cid-wehgqt5k>On this page</h2><ul data-astro-cid-wehgqt5k><li data-astro-cid-wehgqt5k><a href="#focus" data-astro-cid-wehgqt5k>Focus</a></li><li data-astro-cid-wehgqt5k><a href="#hover" data-astro-cid-wehgqt5k>Hover</a></li><li data-astro-cid-wehgqt5k><a href="#search" data-astro-cid-wehgqt5k>Search</a></li><li data-astro-cid-wehgqt5k><a href="#three-surfaces" data-astro-cid-wehgqt5k>Three surfaces</a></li><li data-astro-cid-wehgqt5k><a href="#the-type-strip" data-astro-cid-wehgqt5k>The type strip</a></li><li data-astro-cid-wehgqt5k><a href="#the-config-dock" data-astro-cid-wehgqt5k>The config dock</a></li><li data-astro-cid-wehgqt5k><a href="#the-detail-panel" data-astro-cid-wehgqt5k>The detail panel</a></li><li data-astro-cid-wehgqt5k><a href="#the-source-tab" data-astro-cid-wehgqt5k>The Source tab</a></li><li data-astro-cid-wehgqt5k><a href="#links-draw-under-cards" data-astro-cid-wehgqt5k>Links draw under cards</a></li><li data-astro-cid-wehgqt5k><a href="#labels" data-astro-cid-wehgqt5k>Labels</a></li><li data-astro-cid-wehgqt5k><a href="#keyboard" data-astro-cid-wehgqt5k>Keyboard</a></li></ul></nav></div></main><footer class="foot"><div class="wrap"><div class="foot-grid"><div class="foot-col foot-mark"><img src="/md2hd.svg" alt="md2hd" width="255" height="51"><p class="note" style="max-width: 30ch">Markdown in, map out. Runs entirely in your browser — no account, no server, nothing uploaded.</p></div><div class="foot-col"><h2>Product</h2><ul><li><a href="/product">What it does</a></li><li><a href="/use-cases">Use cases</a></li><li><a href="/app">Open the app</a></li><li><a href="/changelog">Changelog</a></li></ul></div><div class="foot-col"><h2>Learn</h2><ul><li><a href="/guides">Guides</a></li><li><a href="/guides/quickstart">Quickstart</a></li><li><a href="/reference">Syntax reference</a></li><li><a href="/guides/from-obsidian">From Obsidian</a></li></ul></div><div class="foot-col"><h2>Elsewhere</h2><ul><li><a href="https://github.com/evan-steinhilb/md2hd">Source</a></li><li><a href="https://github.com/evan-steinhilb/md2hd/issues">Report an issue</a></li><li><a href="/privacy">Privacy</a></li><li><a href="mailto:contact@civicinformer.com">Contact</a></li></ul></div></div><div class="foot-bar"><span>© 2026 md2hd</span><a href="/privacy">Privacy</a><a href="https://github.com/evan-steinhilb/md2hd/blob/main/LICENSE">License</a><span style="margin-left:auto">Your notes stay on your machine.</span></div></div></footer></body></html>

@@ -12,9 +12,9 @@
     "skills"
   ],
   "scripts": {
-    "build": "npm --prefix ../dev run build && rm -rf dist skills && cp -R ../dev/dist dist && mkdir -p skills && cp -R ../dev/skills/writing-md2hd-maps skills/writing-md2hd-maps",
+    "sync": "npm --prefix ../dev run build && rm -rf dist && cp -R ../dev/dist dist",
     "test": "node smoke.mjs",
-    "prepublishOnly": "npm run build && npm test"
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "markdown",
