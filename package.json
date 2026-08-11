@@ -1,0 +1,29 @@
+{
+  "name": "md2hd",
+  "version": "0.1.0",
+  "description": "Markdown, mapped — point md2hd at a file or folder of notes and read the map in your browser. Frontmatter becomes nodes, wikilinks become edges.",
+  "type": "module",
+  "bin": { "md2hd": "bin/md2hd.mjs" },
+  "files": ["bin", "dist"],
+  "scripts": {
+    "build": "npm --prefix ../dev run build && rm -rf dist && cp -R ../dev/dist dist",
+    "test": "node smoke.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "markdown",
+    "mind-map",
+    "mindmap",
+    "graph",
+    "knowledge-graph",
+    "frontmatter",
+    "wikilinks",
+    "obsidian",
+    "visualization",
+    "cli"
+  ],
+  "homepage": "https://md2hd.app",
+  "repository": { "type": "git", "url": "git+https://github.com/HoboCrunch/md2hd.git" },
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}
