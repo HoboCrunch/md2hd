@@ -1,0 +1,15 @@
+{
+  "name": "md2hd",
+  "description": "Skills for md2hd \u2014 markdown, mapped. Teach your agent to write maps that compile.",
+  "owner": {
+    "name": "HoboCrunch",
+    "url": "https://github.com/HoboCrunch"
+  },
+  "plugins": [
+    {
+      "name": "md2hd",
+      "source": "./",
+      "description": "The writing-md2hd-maps skill: markdown that compiles to the map you meant."
+    }
+  ]
+}

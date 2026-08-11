@@ -1,0 +1,10 @@
+{
+  "name": "md2hd",
+  "description": "Author markdown that md2hd compiles to a graph: node frontmatter, rel: and wikilink edges, the type:map block, and diagnosing maps that parse cleanly but draw the wrong thing.",
+  "version": "0.2.1",
+  "author": { "name": "HoboCrunch", "url": "https://github.com/HoboCrunch" },
+  "homepage": "https://md2hd.app",
+  "repository": "https://github.com/HoboCrunch/md2hd",
+  "license": "MIT",
+  "keywords": ["markdown", "mind-map", "graph", "frontmatter", "wikilinks"]
+}

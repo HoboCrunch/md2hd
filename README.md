@@ -104,6 +104,13 @@ nodes, reversed arrows, dashed placeholders, unlabelled grey lines.
 npx skills add HoboCrunch/md2hd
 ```
 
+Claude Code users can take it as a plugin — this repo is its own marketplace:
+
+```
+/plugin marketplace add HoboCrunch/md2hd
+/plugin install md2hd@md2hd
+```
+
 or copy `skills/writing-md2hd-maps/` into your agent's skills directory — it
 is in the npm tarball too, so an installed `md2hd` carries it at
 `node_modules/md2hd/skills/`. With the skill loaded, "turn these notes into
