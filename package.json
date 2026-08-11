@@ -31,7 +31,7 @@
   "homepage": "https://md2hd.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HoboCrunch/md2hd.git"
+    "url": "git+https://github.com/evan-steinhilb/md2hd.git"
   },
   "license": "MIT",
   "engines": {
