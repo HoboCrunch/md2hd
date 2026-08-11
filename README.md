@@ -92,10 +92,13 @@ Full syntax and guides: [md2hd.app](https://md2hd.app) ·
 
 ## The agent skill
 
-The package ships a skill — `writing-md2hd-maps` — that teaches a coding
-agent the whole authoring language: node frontmatter, `rel:` and wikilink
-edges, the `type: map` block, converting an existing folder of notes into a
-map, and diagnosing a map that parses cleanly but draws the wrong thing.
+Writing a map by hand is easy; having a coding agent write one that
+**compiles to the graph you meant** is what the bundled skill is for. The
+package ships `writing-md2hd-maps`, which teaches an agent the whole
+authoring language — node frontmatter, `rel:` and wikilink edges, the
+`type: map` block, converting an existing folder of notes into a map — and
+how to diagnose one that parses cleanly but draws the wrong thing: missing
+nodes, reversed arrows, dashed placeholders, unlabelled grey lines.
 
 ```sh
 npx skills add HoboCrunch/md2hd
@@ -103,7 +106,8 @@ npx skills add HoboCrunch/md2hd
 
 or copy `skills/writing-md2hd-maps/` into your agent's skills directory — it
 is in the npm tarball too, so an installed `md2hd` carries it at
-`node_modules/md2hd/skills/`.
+`node_modules/md2hd/skills/`. With the skill loaded, "turn these notes into
+an md2hd map" produces markdown that opens as the map you asked for.
 
 ## Development
 
