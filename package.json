@@ -12,7 +12,7 @@
     "skills"
   ],
   "scripts": {
-    "sync": "npm --prefix ../dev run build && rm -rf dist && cp -R ../dev/dist dist",
+    "sync": "npm --prefix ../dev run build && rm -rf dist && cp -R ../dev/dist dist && node scripts/prune-dist.mjs",
     "test": "node smoke.mjs",
     "prepublishOnly": "npm test"
   },
