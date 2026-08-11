@@ -1,7 +1,7 @@
 {
   "name": "md2hd",
   "description": "Author markdown that md2hd compiles to a graph: node frontmatter, rel: and wikilink edges, the type:map block, and diagnosing maps that parse cleanly but draw the wrong thing.",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": { "name": "evan-steinhilb", "url": "https://github.com/evan-steinhilb" },
   "homepage": "https://md2hd.app",
   "repository": "https://github.com/evan-steinhilb/md2hd",

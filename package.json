@@ -1,6 +1,6 @@
 {
   "name": "md2hd",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Markdown, mapped \u2014 point md2hd at a file or folder of notes and read the map in your browser. Frontmatter becomes nodes, wikilinks become edges.",
   "type": "module",
   "bin": {
