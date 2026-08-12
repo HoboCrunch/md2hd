@@ -82,8 +82,8 @@ Notes that were never written for md2hd usually read fine as-is: a `---` line
 only opens a node when what follows looks like YAML, and malformed blocks
 degrade to prose instead of errors.
 
-Full syntax and guides: [md2hd.app](https://md2hd.app) ·
-[reference](https://md2hd.app/reference) · [guides](https://md2hd.app/guides)
+Full syntax and guides: [md2hd.com](https://md2hd.com) ·
+[reference](https://md2hd.com/reference) · [guides](https://md2hd.com/guides)
 
 ## Flags
 
