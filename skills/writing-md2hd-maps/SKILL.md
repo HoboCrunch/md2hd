@@ -1,6 +1,6 @@
 ---
 name: writing-md2hd-maps
-description: Use when authoring or editing markdown that will be rendered by md2hd as a graph or mind map — writing node frontmatter, linking nodes with rel: or [[wikilinks]], setting up the type:map configuration block, converting a folder of existing notes into a map, or diagnosing a map that parses cleanly but draws the wrong thing (nodes missing, arrows reversed, dashed placeholder nodes, unlabelled grey lines).
+description: "Use when authoring or editing markdown that will be rendered by md2hd as a graph or mind map — writing node frontmatter, linking nodes with rel: or [[wikilinks]], setting up the type:map configuration block, converting a folder of existing notes into a map, or diagnosing a map that parses cleanly but draws the wrong thing (nodes missing, arrows reversed, dashed placeholder nodes, unlabelled grey lines)."
 ---
 
 # Writing markdown for md2hd
